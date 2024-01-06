@@ -7,9 +7,11 @@ import streamlit as st
 dataset=pd.read_csv('crop.csv')
 X=dataset.iloc[:,:-1].values
 Y=dataset.iloc[:,-1].values
+
 X_train,X_test.Y_train,Y_test=train_test_split(X,Y,test_size=0.2)
+
 classifier=LogisticRegression()
-classifire.fit(X_train,Y_train)
+classifier.fit(X_train,Y_train)
 
 st.title('Crop Recommendation')
 n=st.number_input('Enter Nitrogen:')
